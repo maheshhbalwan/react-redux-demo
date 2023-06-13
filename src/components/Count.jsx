@@ -1,10 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Counter = () => {
+  const count = useSelector((state) => state);
+
   return (
     <div>
-      {" "}
-      <h1 className="font-semibold">0</h1>
+      <h1 className="font-semibold">{count}</h1>
     </div>
   );
 };
